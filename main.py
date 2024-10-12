@@ -16,7 +16,7 @@ import os
 import math
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 from datasets.mvtec_dataset import mvtec_dataset, OBJECT_TYPE
 
 state_level = {
@@ -162,7 +162,7 @@ def run(config):
 if __name__ == "__main__":
     np.random.seed(10)
     torch.manual_seed(10)
-    dataset_root_dir = '/home/zhujiawen/PDA/data/visa_anomaly_detection'
+    dataset_root_dir = '/home/siyi/master/dataset/visa_anomaly_detection'
     datasetname = "visa"
     obj_type_id = 0
     config = {
